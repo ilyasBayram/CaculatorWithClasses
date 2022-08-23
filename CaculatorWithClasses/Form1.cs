@@ -28,6 +28,7 @@ namespace CaculatorWithClasses
         readonly Multiply Multiply = new Multiply();
 
 
+
         public void Numbers()
         {
 
@@ -50,8 +51,7 @@ namespace CaculatorWithClasses
         {
 
             Numbers();
-            LblResult.Text=Convert.ToString(Addition.Add(Variables));
-
+            LblResult.Text = Convert.ToString(Addition.Calculate(Variables));
         }
 
         public void Sub()
@@ -59,7 +59,7 @@ namespace CaculatorWithClasses
 
             Numbers();
 
-            LblResult.Text = Convert.ToString(Subtract.Sub(Variables));
+            LblResult.Text = Convert.ToString(Subtract.Calculate(Variables));
 
          
         }
@@ -68,13 +68,13 @@ namespace CaculatorWithClasses
         {
             Numbers();
 
-            LblResult.Text = Convert.ToString(Division.Div(Variables));
+            LblResult.Text = Convert.ToString(Division.Calculate(Variables));
         }
 
         public void Mult()
         {
             Numbers();
-            LblResult.Text = Convert.ToString(Multiply.Mul(Variables));
+            LblResult.Text = Convert.ToString(Multiply.Calculate(Variables));
         }
 
         private void BtnAddition_Click(object sender, EventArgs e)
@@ -85,6 +85,7 @@ namespace CaculatorWithClasses
         private void BtnMinus_Click(object sender, EventArgs e)
         {
             Sub();
+
         }
 
         private void BtnDivide_Click(object sender, EventArgs e)

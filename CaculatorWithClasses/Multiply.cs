@@ -6,13 +6,12 @@ using System.Threading.Tasks;
 
 namespace CaculatorWithClasses
 {
-    public class Multiply
+    public class Multiply:ICalculation
     {
-        public double Mul(Variables multiply)
+        public double Calculate(Variables math)
         {
-            multiply.Result = multiply.ValueFirst * multiply.ValueSecond;
-
-            return multiply.Result;
+           return math.Result = math.ValueFirst * math.ValueSecond;
         }
+
     }
 }

@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace CaculatorWithClasses
 {
-    public class Division
+    public class Division:ICalculation
     {
-        public double Div(Variables division)
+        public double  Calculate(Variables math)
         {
-            division.Result = division.ValueFirst / division.ValueSecond;
-
-            return division.Result;
+           return  math.Result = math.ValueFirst / math.ValueSecond;
         }
+
+
     }
 }

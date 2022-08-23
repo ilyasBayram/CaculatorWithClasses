@@ -6,13 +6,12 @@ using System.Threading.Tasks;
 
 namespace CaculatorWithClasses
 {
-    public class Addition
+    public class Addition: ICalculation
     {
-        public double Add (Variables addition)
+    
+        public double Calculate(Variables math)
         {
-            addition.Result = addition.ValueFirst + addition.ValueSecond;
-
-            return addition.Result;
+           return math.Result = math.ValueFirst + math.ValueSecond;
         }
     }
 }

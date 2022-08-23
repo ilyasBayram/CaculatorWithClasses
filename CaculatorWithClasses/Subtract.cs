@@ -6,13 +6,12 @@ using System.Threading.Tasks;
 
 namespace CaculatorWithClasses
 {
-    public class Subtract
+    public class Subtract:ICalculation
     {
-        public double Sub(Variables subtract)
+       
+        public double  Calculate(Variables math)
         {
-            subtract.Result = Math.Abs(subtract.ValueFirst - subtract.ValueSecond);
-
-            return subtract.Result;
+          return math.Result = Math.Abs(math.ValueFirst - math.ValueSecond);
         }
 
     }
