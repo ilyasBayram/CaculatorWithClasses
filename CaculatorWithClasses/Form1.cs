@@ -17,16 +17,24 @@ namespace CaculatorWithClasses
             InitializeComponent();
         }
 
-        readonly Addition Addition = new Addition();
+        readonly Addition addition = new Addition();
 
-        readonly Variables Variables = new Variables();
+        readonly Variables variables = new Variables();
 
-        readonly Subtract Subtract = new Subtract();
+        readonly Subtract subtract = new Subtract();
 
-        readonly Division Division = new Division();
+        readonly Division division = new Division();
 
-        readonly Multiply Multiply = new Multiply();
+        readonly Multiply multiply = new Multiply();
 
+
+        ICalculation calculation = new Subtract();
+
+        CalculationManagement total = new CalculationManagement();
+
+    
+
+        
 
 
         public void Numbers()
@@ -40,9 +48,9 @@ namespace CaculatorWithClasses
             }
             else
             {
-                Variables.ValueFirst = int.Parse(TxBoxNumber1.Text);
+                variables.ValueFirst = int.Parse(TxBoxNumber1.Text);
 
-                Variables.ValueSecond = int.Parse(TxBoxNumber2.Text);
+                variables.ValueSecond = int.Parse(TxBoxNumber2.Text);
             }      
                
         }
@@ -51,7 +59,9 @@ namespace CaculatorWithClasses
         {
 
             Numbers();
-            LblResult.Text = Convert.ToString(Addition.Calculate(Variables));
+            LblResult.Text = Convert.ToString(addition.Calculate(variables));
+
+            
         }
 
         public void Sub()
@@ -59,7 +69,7 @@ namespace CaculatorWithClasses
 
             Numbers();
 
-            LblResult.Text = Convert.ToString(Subtract.Calculate(Variables));
+            LblResult.Text = Convert.ToString(total.TopCalculate(subtract, variables));
 
          
         }
@@ -68,18 +78,19 @@ namespace CaculatorWithClasses
         {
             Numbers();
 
-            LblResult.Text = Convert.ToString(Division.Calculate(Variables));
+            LblResult.Text = Convert.ToString(variables.Result);
         }
 
         public void Mult()
         {
             Numbers();
-            LblResult.Text = Convert.ToString(Multiply.Calculate(Variables));
+            LblResult.Text = Convert.ToString(total.TopCalculate(multiply,variables));
         }
 
         private void BtnAddition_Click(object sender, EventArgs e)
         {
             Add();
+
         }
 
         private void BtnMinus_Click(object sender, EventArgs e)

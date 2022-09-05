@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace CaculatorWithClasses
 {
-    interface ICalculation
+    public interface ICalculation
     {
         double Calculate(Variables math);
+
     }
 }

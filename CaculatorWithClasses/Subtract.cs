@@ -11,7 +11,7 @@ namespace CaculatorWithClasses
        
         public double  Calculate(Variables math)
         {
-          return math.Result = Math.Abs(math.ValueFirst - math.ValueSecond);
+          return  math.Result = Math.Abs(math.ValueFirst - math.ValueSecond);
         }
 
     }

@@ -8,11 +8,10 @@ namespace CaculatorWithClasses
 {
     public class Division:ICalculation
     {
-        public double  Calculate(Variables math)
+        public double Calculate(Variables math)
         {
-           return  math.Result = math.ValueFirst / math.ValueSecond;
+            return math.Result = math.ValueFirst / math.ValueSecond;
         }
-
 
     }
 }
